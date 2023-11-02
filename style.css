@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  max-width: 100px;
+  height: auto;
+}
+
+
+header {
+  background-color: #1c2b3b;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin-top: 0;
+  padding: 0;
+  font-family: 'Dancing Script', bold;
+  font-size: 32px;
+  /* Remove the default margin on top */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-family: 'Century Gothic', cursive;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #2ecc71;
+}
+
+.banner {
+  background-image: url('Images/forest-image.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 200px 0;
+  color: #fcfcfc;
+  background-position: center;
+  /* Add this line */
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+}
+
+
+.banner h2 {
+  font-size: 48px;
+  font-family: 'Dancing Script', cursive;
+
+}
+
+.banner p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #1c2b3b;
+}
+
+
+
+
+footer {
+  background-color: #1c2b3b;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
