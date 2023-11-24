@@ -1,21 +1,24 @@
+/* Resetting default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Global styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
-
 }
 
-
-.logo {
-  margin: 0;
-  padding: 0;
+/* Header styles */
+header {
+  background-color: #1c2b3b;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -23,24 +26,10 @@ body {
   height: auto;
 }
 
-
-header {
-  background-color: #1c2b3b;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-}
-
 header h1 {
   margin-top: 0;
-  padding: 0;
-  font-family: 'Dancing Script', bold;
+  font-family: 'Dancing Script', cursive;
   font-size: 32px;
-  /* Remove the default margin on top */
 }
 
 nav ul {
@@ -65,6 +54,7 @@ nav a:hover {
   color: #2ecc71;
 }
 
+/* Banner styles */
 .banner {
   background-image: url('forest-image.jpg');
   background-size: cover;
@@ -72,19 +62,11 @@ nav a:hover {
   padding: 200px 0;
   color: #fcfcfc;
   background-position: center;
-  /* Add this line */
 }
-
-.banner-text {
-  position: relative;
-  z-index: 2;
-}
-
 
 .banner h2 {
   font-size: 48px;
   font-family: 'Dancing Script', cursive;
-
 }
 
 .banner p {
@@ -109,9 +91,12 @@ nav a:hover {
   background-color: #1c2b3b;
 }
 
+/* Content section styles */
+.content {
+  padding: 40px;
+}
 
-
-
+/* Footer styles */
 footer {
   background-color: #1c2b3b;
   color: #fff;
