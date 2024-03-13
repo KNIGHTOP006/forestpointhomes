@@ -39,7 +39,7 @@
         .main-content {
             text-align: center;
             padding: 50px 0;
-            background-image: url('Images/forest-image.jpg');
+            background-image: url('forest-image.jpg');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -85,16 +85,19 @@
         .our-houses {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start; /* Adjust alignment */
             padding: 50px;
             background-color: #000000;
         }
         .house {
             text-align: center;
+            width: 33%; /* Adjust width to evenly distribute */
         }
         .house img {
-            width: 500px; /* Adjust the width as needed */
-            height: auto;
+            width: 2500px; /* Set images to fill container */
+            height: 2500px; /* Maintain aspect ratio */
+            max-width: 300px; /* Set maximum width */
+            max-height: 200px; /* Set maximum height */
             margin-bottom: 20px;
         }
         .house h2 {
