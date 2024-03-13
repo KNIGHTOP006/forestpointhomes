@@ -1,76 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forest Point Homes</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-
-
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Point Homes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: green;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        .contact-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .contact-btn:hover {
+            background-color: darkgreen;
+            cursor: pointer;
+        }
+        .main-content {
+            text-align: center;
+            padding: 50px 0;
+            background-image: url('forest-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-content h1 {
+            font-weight: bold;
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        .main-content .contact-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .main-content .contact-btn:hover {
+            background-color: darkgreen;
+            cursor: pointer;
+        }
+        .about-us {
+            background-color: rgb(0, 0, 0);
+            padding: 50px;
+            text-align: center;
+        }
+        .about-us h1 {
+            font-size: 30px;
+            color: rgb(15, 214, 15);
+            margin-bottom: 20px;
+        }
+        .about-us p {
+            font-size: 25px;
+            line-height: 1.6;
+            color: rgb(9, 150, 9);
+        }
+        .our-houses {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            background-color: #000000;
+        }
+        .house {
+            text-align: center;
+        }
+        .house img {
+            width: 500px; /* Adjust the width as needed */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .house h2 {
+            font-size: 20px;
+            color: green;
+            margin-bottom: 10px;
+        }
+        .house p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
 </head>
-
 <body>
-<header id="website-header">
-        <div>
-            <a id="logo" href="/">Forest Point Homes</a>
-        </div>
-        <div id="social-icons">
-            <a href="https://instagram.com/forestpointhomes" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/919611300422" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://facebook.com/people/Forest-Point-Homes/pfbid02kWND7BQfmkHU2HHXACzumJiwc8hLiZR6mJo9AraL3crpSk1HUa9Jr1d82qpnzNX1l/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook"></i></a>
-        </div>
-    </header>
 
-  <section id="home">
-    <div class="slideshow-container">
-      <!-- Add more slides with different images -->
-      <div class="mySlides">
-        <img src="Images/slide1.jpg" alt="Slide 1">
-      </div>
-      <div class="mySlides">
-        <img src="Images/slide2.jpg" alt="Slide 2">
-      </div>
-      <div class="mySlides">
-        <img src="image3.jpg" alt="Slide 3">
-      </div>
-      <div class="mySlides">
-        <img src="image4.jpg" alt="Slide 4">
-      </div>
-      <div class="mySlides">
-        <img src="image5.jpg" alt="Slide 5">
-      </div>
+<header>
+    <div class="logo">Forest Point Homes</div>
+    <a href="https://wa.me/919611300422" class="contact-btn">Contact Us</a>
+</header>
+
+<div class="main-content">
+    <h1>Your perfect getaway in the heart of the forest... yet in Bengaluru</h1>
+    <a href="https://wa.me/919611300422" class="contact-btn">Contact Us</a>
+</div>
+
+<div class="about-us">
+    <h1>Welcome to Forest Point Homes</h1>
+    <p>A tranquil retreat nestled in the heart of the forest.<br>
+       Our mission is to provide you with a unique and unforgettable<br>
+        experience with nature. Immerse yourself in the lush<br>
+         greenery, listen to the soothing sounds of the forest, and reconnect with the natural world.</p>
+</div>
+
+<div class="our-houses">
+    <div class="house">
+        <img src="Images/51.JPG" alt="House 1">
+        <h2>Kasthuri Vana</h2>
+        <p>Description of House 1</p>
     </div>
-
-    <div class="banner">
-      <h2>Welcome to Forest Point Homes</h2>
-      <p>Your perfect getaway in the heart of the forest.</p>
-      <a href="#about" class="btn">Learn More</a>
+    <div class="house">
+        <img src="Images/10a.jpg" alt="House 2">
+        <h2>Solai Vana</h2>
+        <p>Description of House 2</p>
     </div>
-  </section>
-  <!-- ... (previous HTML code) ... -->
-
-  <section id="about" class="forest-theme">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>Welcome to Forest Point Homes, a tranquil retreat nestled in the heart of the forest. Our mission is to provide
-        you with a unique and unforgettable experience with nature. Immerse yourself in the lush greenery, listen to the
-        soothing sounds of the forest, and reconnect with the natural world.</p>
+    <div class="house">
+        <img src="Images/24.jpg" alt="House 3">
+        <h2>Bangaru Vana</h2>
+        <p>Description of House 3</p>
     </div>
-  </section>
+</div>
 
-<div class="elfsight-app-280b215e-9c66-458e-931c-87ccd13a2566" data-elfsight-app-lazy></div><script src="script.js"></script>
-
-
-
-
-  <script src="script.js"></script>
 </body>
-
 </html>
