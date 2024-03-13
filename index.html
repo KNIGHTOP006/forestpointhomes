@@ -38,11 +38,10 @@
         }
         .main-content {
             text-align: center;
-            padding: 50px 0;
+            padding: 50px 20px; /* Decreased padding for mobile */
             background-image: url('Images/forest-image.jpg');
             background-size: cover;
             background-position: center;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -50,7 +49,7 @@
         }
         .main-content h1 {
             font-weight: bold;
-            font-size: 50px;
+            font-size: 30px; /* Decreased font size for mobile */
             color: white;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
@@ -62,6 +61,7 @@
             border: none;
             border-radius: 5px;
             text-decoration: none;
+            margin-top: 20px; /* Added margin for mobile */
         }
         .main-content .contact-btn:hover {
             background-color: darkgreen;
@@ -69,36 +69,37 @@
         }
         .about-us {
             background-color: rgb(0, 0, 0);
-            padding: 50px;
+            padding: 50px 20px; /* Decreased padding for mobile */
             text-align: center;
         }
         .about-us h1 {
-            font-size: 30px;
+            font-size: 24px; /* Decreased font size for mobile */
             color: rgb(15, 214, 15);
             margin-bottom: 20px;
         }
         .about-us p {
-            font-size: 25px;
+            font-size: 20px; /* Decreased font size for mobile */
             line-height: 1.6;
             color: rgb(9, 150, 9);
         }
         .our-houses {
             display: flex;
+            flex-wrap: wrap; /* Added flex-wrap for mobile */
             justify-content: space-around;
-            align-items: flex-start; /* Adjust alignment */
-            padding: 50px;
+            align-items: flex-start;
+            padding: 50px 20px; /* Decreased padding for mobile */
             background-color: #000000;
         }
         .house {
             text-align: center;
-            width: 33%; /* Adjust width to evenly distribute */
+            width: 100%; /* Adjusted width for mobile */
+            margin-bottom: 20px; /* Added margin for mobile */
         }
         .house img {
-            width: 2500px; /* Set images to fill container */
-            height: 2500px; /* Maintain aspect ratio */
+            width: 100%; /* Set images to fill container */
+            height: auto;
             max-width: 300px; /* Set maximum width */
-            max-height: 200px; /* Set maximum height */
-            margin-bottom: 20px;
+            margin-bottom: 10px; /* Decreased margin for mobile */
         }
         .house h2 {
             font-size: 20px;
