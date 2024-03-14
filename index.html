@@ -4,186 +4,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
     <title>Forest Point Homes</title>
     <style>
-/* Base styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
+        /* Base styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
 
-header {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.logo {
-    color: green;
-    font-weight: bold;
-    font-size: 24px;
-}
+        .logo {
+            color: green;
+            font-weight: bold;
+            font-size: 24px;
+        }
 
-.contact-btn {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-}
+        .contact-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
 
-.contact-btn:hover {
-    background-color: darkgreen;
-    cursor: pointer;
-}
+        .contact-btn:hover {
+            background-color: darkgreen;
+            cursor: pointer;
+        }
 
-/* Main content section */
-.main-content {
-    text-align: center;
-    padding: 150px 20px; /* Adjusted padding */
-    background-image: url('Images/forest-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-}
+        /* Main content section */
+        .main-content {
+            text-align: center;
+            padding: 150px 20px;
+            /* Adjusted padding */
+            background-image: url('Images/forest-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
 
-.main-content h1 {
-    font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
+        .main-content h1 {
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
 
-.main-content .contact-btn {
-    margin-top: 20px;
-}
+        .main-content .contact-btn {
+            margin-top: 20px;
+        }
 
-/* About us section */
-.about-us {
-    background-color: rgb(0, 0, 0);
-    padding: 50px 20px; /* Adjusted padding */
-    text-align: center;
-}
+        /* About us section */
+        .about-us {
+            background-color: rgb(0, 0, 0);
+            padding: 50px 20px;
+            /* Adjusted padding */
+            text-align: center;
+        }
 
-.about-us h1 {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 20px;
-}
+        .about-us h1 {
+            font-size: 24px;
+            color: white;
+            margin-bottom: 20px;
+        }
 
-.about-us p {
-    font-size: 20px;
-    line-height: 1.6;
-    color: rgb(15, 214, 15);
-}
+        .about-us p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: rgb(15, 214, 15);
+        }
 
-/* Our houses section */
-.our-houses {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 50px 20px; /* Adjusted padding */
-    background-color: #000000;
-}
+        /* Our houses section */
+        .our-houses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 20px;
+            /* Adjusted padding */
+            background-color: #000000;
+        }
 
-.house {
-    text-align: center;
-    width: calc(33.33% - 20px); /* Adjusted width for house */
-    margin-bottom: 20px;
-}
+        .house {
+            text-align: center;
+            width: calc(33.33% - 20px);
+            /* Adjusted width for house */
+            margin-bottom: 20px;
+        }
 
-.house img {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    margin-bottom: 10px;
-}
+        .house img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
 
-.house h2 {
-    font-size: 20px;
-    color: green;
-    margin-bottom: 10px;
-}
+        .house h2 {
+            font-size: 20px;
+            color: green;
+            margin-bottom: 10px;
+        }
 
-.house p {
-    font-size: 16px;
-    line-height: 1.6;
-}
+        .house p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
-/* Gallery section */
-.gallery {
-    text-align: center;
-    padding: 50px 20px; /* Adjusted padding */
-    background-color: #000000;
-    color: rgb(248, 248, 248);
-}
+        /* Gallery section */
+        .gallery {
+            text-align: center;
+            padding: 50px 20px;
+            /* Adjusted padding */
+            background-color: #000000;
+            color: rgb(248, 248, 248);
+        }
 
-.gallery h2 {
-    font-size: 50px;
-    color: green;
-    margin-bottom: 20px;
-}
+        .gallery h2 {
+            font-size: 50px;
+            color: green;
+            margin-bottom: 20px;
+        }
 
-.gallery p {
-    font-size: 25px;
-    margin-bottom: 20px;
-}
+        .gallery p {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
 
-.gallery-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center images horizontally */
-}
+        .gallery-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* Center images horizontally */
+        }
 
-.gallery-images img {
-    width: 300px; /* Set a fixed width for gallery images */
-    height: auto;
-    margin: 10px; /* Add margin between images */
-}
+        .gallery-images img {
+            width: 300px;
+            /* Set a fixed width for gallery images */
+            height: auto;
+            margin: 10px;
+            /* Add margin between images */
+        }
 
-/* Media Query for screens smaller than 768px (mobile devices) */
-@media only screen and (max-width: 768px) {
-    .main-content {
-        padding: 100px 20px; /* Adjusted padding for mobile */
-    }
+        /* Reviews widget */
+        .reviews-widget {
+            text-align: center;
+            padding: 50px 20px;
+            /* Adjusted padding */
+            background-color: #f0f0f0;
+        }
 
-    .main-content h1 {
-        font-size: 24px; /* Adjusted font size for mobile */
-    }
+        .reviews-widget iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border: none;
+        }
 
-    .main-content .contact-btn {
-        margin-top: 10px; /* Adjusted margin for mobile */
-    }
+        /* Footer section */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .about-us {
-        padding: 30px 20px; /* Adjusted padding for mobile */
-    }
+        /* Media Query for screens smaller than 768px (mobile devices) */
+        @media only screen and (max-width: 768px) {
+            .main-content {
+                padding: 100px 20px;
+                /* Adjusted padding for mobile */
+            }
 
-    .about-us h1 {
-        font-size: 20px; /* Adjusted font size for mobile */
-    }
+            .main-content h1 {
+                font-size: 24px;
+                /* Adjusted font size for mobile */
+            }
 
-    .about-us p {
-        font-size: 16px; /* Adjusted font size for mobile */
-    }
+            .main-content .contact-btn {
+                margin-top: 10px;
+                /* Adjusted margin for mobile */
+            }
 
-    .house {
-        width: calc(50% - 20px); /* Adjusted width for mobile */
-    }
+            .about-us {
+                padding: 30px 20px;
+                /* Adjusted padding for mobile */
+            }
 
-    .gallery-images img {
-        width: calc(50% - 20px); /* Adjusted width for mobile */
-    }
-}
+            .about-us h1 {
+                font-size: 20px;
+                /* Adjusted font size for mobile */
+            }
+
+            .about-us p {
+                font-size: 16px;
+                /* Adjusted font size for mobile */
+            }
+
+            .house {
+                width: calc(50% - 20px);
+                /* Adjusted width for mobile */
+            }
+
+            .gallery-images img {
+                width: calc(50% - 20px);
+                /* Adjusted width for mobile */
+            }
+
+            .elfsight-app-280b215e-9c66-458e-931c-87ccd13a2566 .elfsight-app {
+            background-color: black !important;
+        }
 
 
-
+        }
     </style>
 </head>
 
@@ -236,6 +279,13 @@ header {
             <img src="Images/slide2.jpg" alt="Lawn 3">
         </div>
     </div>
+
+    <div class="elfsight-app-280b215e-9c66-458e-931c-87ccd13a2566" data-elfsight-app-lazy></div>
+
+
+    <footer>
+        <p>&copy; 2024 Forest Point Homes. All rights reserved.</p>
+    </footer>
 
 </body>
 
