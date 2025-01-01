@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <link rel="icon" href="Images/logo.png" type="image/x-icon">
+    <title>Forest Point Homes</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: #f5f5f5 url('Images/Bangaru_vana.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    background: #ffb703;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.hero .book-now-btn {
+    background-color: #008000; /* A contrasting color for Book Now */
+    margin-left: 15px; /* Adjust spacing if needed */
+}
+
+.hero .btn:hover,
+.hero .book-now-btn:hover {
+    opacity: 0.8;
+}
+
+
+.btn:hover {
+    background: #ff8800;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ffb703;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background: #f9f5f1;
+}
+
+.content-text {
+    max-width: 50%;
+    font-family: 'Georgia', serif;
+    color: #5a4231;
+}
+
+.content-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.content-text .explore-btn {
+    background: #5a4231;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.content-text .explore-btn:hover {
+    background: #3b2c20;
+}
+
+.content-image {
+    max-width: 40%;
+}
+
+.content-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.apartments {
+    padding: 4rem 2rem;
+    background: #f9f5f1;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    color: #5a4231;
+    margin-bottom: 2rem;
+}
+
+.apartment-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.apartment-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    flex: 1;
+    text-align: center;
+}
+
+.apartment-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.apartment-card h3 {
+    font-size: 1.5rem;
+    color: #5a4231;
+    margin-bottom: 0.5rem;
+}
+
+.apartment-card p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.apartment-card .btn {
+    background: #5a4231;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.apartment-card .btn:hover {
+    background: #3b2c20;
+}
+
+.apartment-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.apartment-details {
+    flex: 1;
+    padding: 1rem;
+}
+
+.apartment-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.features {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.features img {
+    width: 40px;
+    height: 40px;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.book-now {
+    display: inline-block;
+    background: #5a4231;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.book-now:hover {
+    background: #3b2c20;
+}
+
+.apartment-carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.carousel-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.carousel-nav button {
+    background: #5a4231;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.carousel-nav button:hover {
+    background: #3b2c20;
+}
+
+/* Bangaru Vana Section */
+.bangaru-vana {
+    padding: 3rem 2rem;
+    background: #f9f5f1;
+}
+
+.bangaru-vana-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.bangaru-vana-details {
+    flex: 1;
+    font-family: 'Georgia', serif;
+    color: #5a4231;
+}
+
+.bangaru-vana-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.bangaru-vana-details .description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.bangaru-vana-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.bangaru-vana-details .features {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.bangaru-vana-details .features img {
+    width: 40px;
+    height: 40px;
+}
+
+.bangaru-vana-details .book-now {
+    display: inline-block;
+    background: #5a4231;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.bangaru-vana-details .book-now:hover {
+    background: #3b2c20;
+}
+
+.bangaru-vana-carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bangaru-vana-carousel .carousel-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.bangaru-vana-carousel .carousel-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.bangaru-vana-carousel .carousel-nav button {
+    background: #5a4231;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.bangaru-vana-carousel .carousel-nav button:hover {
+    background: #3b2c20;
+}
+
+/* Kasthuri Vana Section */
+.kasthuri-vana {
+    padding: 3rem 2rem;
+    background: #f9f5f1;
+}
+
+.kasthuri-vana-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.kasthuri-vana-details {
+    flex: 1;
+    font-family: 'Georgia', serif;
+    color: #5a4231;
+}
+
+.kasthuri-vana-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.kasthuri-vana-details .description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.kasthuri-vana-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.kasthuri-vana-details .features {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.kasthuri-vana-details .features img {
+    width: 40px;
+    height: 40px;
+}
+
+.kasthuri-vana-details .book-now {
+    display: inline-block;
+    background: #5a4231;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.kasthuri-vana-details .book-now:hover {
+    background: #3b2c20;
+}
+
+.kasthuri-vana-carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kasthuri-vana-carousel .carousel-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.kasthuri-vana-carousel .carousel-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.kasthuri-vana-carousel .carousel-nav button {
+    background: #5a4231;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.kasthuri-vana-carousel .carousel-nav button:hover {
+    background: #3b2c20;
+}
+
+/* Solai Vana Section */
+.solai-vana {
+    padding: 3rem 2rem;
+    background: #f9f5f1;
+}
+
+.solai-vana-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    align-items: flex-start;
+}
+
+.solai-vana-details {
+    flex: 1;
+    font-family: 'Georgia', serif;
+    color: #5a4231;
+}
+
+.solai-vana-details h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.solai-vana-details .description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.solai-vana-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.solai-vana-details .features {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.solai-vana-details .features img {
+    width: 40px;
+    height: 40px;
+}
+
+.solai-vana-details .book-now {
+    display: inline-block;
+    background: #5a4231;
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.solai-vana-details .book-now:hover {
+    background: #3b2c20;
+}
+
+.solai-vana-carousel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.solai-vana-carousel .carousel-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.solai-vana-carousel .carousel-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.solai-vana-carousel .carousel-nav button {
+    background: #5a4231;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.solai-vana-carousel .carousel-nav button:hover {
+    background: #3b2c20;
+}
+
+.footer {
+    background-color: #3b2c20;
+    color: #f6f0eb;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links li {
+    margin: 0;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.map-container iframe {
+    border: none;
+    width: 100%;
+    height: 300px;
+}
+
+.footer-bottom {
+    background-color: #3b2c20;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-bottom a {
+    color: #3b2c20;
+    text-decoration: none;
+}
+    
+        
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Welcome to Forest Point Homes</h1>
+        <p>Luxury Apartments with Scenic Views</p>
+        <a href="#apartments" class="btn">Explore Our Apartments</a>
+        <a href="https://wa.me/919611300422" class="btn book-now-btn">Book Now</a>
+    </div>
+
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#apartments">Our Houses</a>
+        <a href="https://wa.me/919611300422">Contact Us</a>
+    </div>
+
+    <section id="apartments"class="apartments">
+        <h2 class="section-title">Our Houses</h2>
+        <div class="apartment-cards">
+            <!-- Apartment Card 1 -->
+            <div class="apartment-card">
+                <img src="images/kasthuri_vana.jpg" alt="Apartment 1">
+                <h3>Kasthuri Vana</h3>
+                <a href="#kasthuri-vana" class="btn">Explore</a>
+            </div>
+
+            <!-- Apartment Card 2 -->
+            <div class="apartment-card">
+                <img src="images/solaivana.jpg" alt="Apartment 2">
+                <h3>Solai Vana</h3>
+                <a href="#solai-vana" class="btn">Explore</a>
+            </div>
+
+            <!-- Apartment Card 3 -->
+            <div class="apartment-card">
+                <img src="images/bangaruvana.jpg" alt="Apartment 3">
+                <h3>Bangaruu Vana</h3>
+                <a href="#bangaru-vana" class="btn">Explore</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Kasthuri Vana Section -->
+    <section id="kasthuri-vana" class="kasthuri-vana">
+        <div class="kasthuri-vana-container">
+            <div class="kasthuri-vana-details">
+                <h1>Kasthuri Vana</h1>
+                <p class="description">
+                    Kasthuri Vana is a peaceful 3BHK House designed to provide comfort and luxury in the midst of nature. The apartment 
+                    offers expansive views of the forest, a spacious living room, and modern amenities that ensure a relaxing lifestyle.
+                </p>
+                <h3>Features</h3>
+                <div class="features">
+                    <img src="Images/wifi-icon.png" alt="Wi-Fi">
+                    <img src="Images/bed-icon.png" alt="Beds">
+                    <img src="Images/kitchen-icon.png" alt="Kitchen">
+                    <img src="Images/air-icon.png" alt="Air Conditioning">
+                    <img src="Images/parking-icon.png" alt="Parking">
+                </div>
+                <a href="https://wa.me/919611300422" class="book-now">Book Now</a>
+            </div>
+            <div class="kasthuri-vana-carousel">
+                <img src="Images/kasthuri-vana.jpg" alt="Kasthuri Vana View" class="carousel-image" id="carousel-image-kasthuri">
+                <div class="carousel-nav">
+                    <button onclick="prevImageKasthuri()">◀</button>
+                    <button onclick="nextImageKasthuri()">▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solai Vana Section -->
+    <section id="solai-vana" class="solai-vana">
+        <div class="solai-vana-container">
+            <div class="solai-vana-details">
+                <h1>Solai Vana</h1>
+                <p class="description">
+                    Solai Vana offers an immersive experience, blending modern design with natural beauty. This 3BHK apartment features 
+                    a balcony overlooking the picturesque hills, perfect for enjoying your morning coffee while basking in the serene 
+                    landscape. Designed with a sleek touch, this apartment offers the best of both worlds.
+                </p>
+                <h3>Features</h3>
+                <div class="features">
+                    <img src="Images/wifi-icon.png" alt="Wi-Fi">
+                    <img src="Images/bed-icon.png" alt="Beds">
+                    <img src="Images/kitchen-icon.png" alt="Kitchen">
+                    <img src="Images/air-icon.png" alt="Air Conditioning">
+                    <img src="Images/parking-icon.png" alt="Parking">
+                </div>
+                <a href="https://wa.me/919611300422" class="book-now">Book Now</a>
+            </div>
+            <div class="solai-vana-carousel">
+                <img src="Images/solai-vana.jpg" alt="Solai Vana View" class="carousel-image" id="carousel-image-solai">
+                <div class="carousel-nav">
+                    <button onclick="prevImageSolai()">◀</button>
+                    <button onclick="nextImageSolai()">▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bangaru Vana Section -->
+    <section id="bangaru-vana" class="bangaru-vana">
+        <div class="bangaru-vana-container">
+            <div class="bangaru-vana-details">
+                <h1>Bangaru Vana</h1>
+                <p class="description">
+                    Experience the height of comfort in the 3BHK Bangaru Vana House. Located on the top floor with panoramic views, 
+                    this apartment offers an open-plan layout and a luxurious interior, ideal for both intimate family living and larger 
+                    gatherings. Let the tranquil surroundings be a perfect complement to the premium amenities available.
+                </p>
+                <h3>Features</h3>
+                <div class="features">
+                    <img src="Images/wifi-icon.png" alt="Wi-Fi">
+                    <img src="Images/bed-icon.png" alt="Beds">
+                    <img src="Images/kitchen-icon.png" alt="Kitchen">
+                    <img src="Images/air-icon.png" alt="Air Conditioning">
+                    <img src="Images/parking-icon.png" alt="Parking">
+                </div>
+                <a href="https://wa.me/919611300422" class="book-now">Book Now</a>
+            </div>
+            <div class="bangaru-vana-carousel">
+                <img src="Images/bangaru-vana.jpg" alt="Bangaru Vana View" class="carousel-image" id="carousel-image-bangaru">
+                <div class="carousel-nav">
+                    <button onclick="prevImageBangaru()">◀</button>
+                    <button onclick="nextImageBangaru()">▶</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Google Reviews widget -->
+        <div class="elfsight-app-280b215e-9c66-458e-931c-87ccd13a2566" data-elfsight-app-lazy></div>
+
+    
+
+
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Left Side: Reservations, Links, and Socials -->
+        <div class="footer-left">
+            <div class="footer-section">
+                <h4>Reservations</h4>
+                <ul>
+                    <li>Forest point Homes, Begihalli, Karnataka 560105</li>
+                    <li>+91 96113 00422</li>
+                    <li>forestpointhomes@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="https://wa.me/919611300422">Contact</a></li>
+                    <li><a href="#apartments">Houses</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Socials</h4>
+                <ul class="social-links">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/forestpointhomes/">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Side: Google Map Location -->
+        <div class="footer-right">
+            <h4>Our Location</h4>
+            <div class="map-container">
+                <!-- Google Map Embed -->
+                <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Forest point Homes, Begihalli, Karnataka 560105&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://embed-googlemap.com">google map embed html</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>        </div>
+    </div>
+
+
+
+
+    <script>
+        const imagesKasthuri = [
+            "Images/kasthuri-feature1.jpg",
+            "Images/kasthuri-feature2.jpg",
+            "Images/kasthuri-feature3.JPG",
+            "Images/kasthuri-feature4.JPG"
+        ];
+
+        let currentImageIndexKasthuri = 0;
+        const carouselImageKasthuri = document.getElementById('carousel-image-kasthuri');
+
+        function nextImageKasthuri() {
+            currentImageIndexKasthuri = (currentImageIndexKasthuri + 1) % imagesKasthuri.length;
+            carouselImageKasthuri.src = imagesKasthuri[currentImageIndexKasthuri];
+        }
+
+        function prevImageKasthuri() {
+            currentImageIndexKasthuri = (currentImageIndexKasthuri - 1 + imagesKasthuri.length) % imagesKasthuri.length;
+            carouselImageKasthuri.src = imagesKasthuri[currentImageIndexKasthuri];
+        }
+
+        const imagesSolai = [
+            "Images/solai-feature1.jpg",
+            "Images/solai-feature2.JPG",
+            "Images/solai-feature3.JPG",
+            "Images/solai-feature4.JPG"
+        ];
+
+        let currentImageIndexSolai = 0;
+        const carouselImageSolai = document.getElementById('carousel-image-solai');
+
+        function nextImageSolai() {
+            currentImageIndexSolai = (currentImageIndexSolai + 1) % imagesSolai.length;
+            carouselImageSolai.src = imagesSolai[currentImageIndexSolai];
+        }
+
+        function prevImageSolai() {
+            currentImageIndexSolai = (currentImageIndexSolai - 1 + imagesSolai.length) % imagesSolai.length;
+            carouselImageSolai.src = imagesSolai[currentImageIndexSolai];
+        }
+
+        const imagesBangaru = [
+            "Images/bangaru-feature1.jpg",
+            "Images/bangaru-feature2.JPG",
+            "Images/bangaru-feature3.JPG",
+            "Images/bangaru-feature4.JPG"
+        ];
+
+        let currentImageIndexBangaru = 0;
+        const carouselImageBangaru = document.getElementById('carousel-image-bangaru');
+
+        function nextImageBangaru() {
+            currentImageIndexBangaru = (currentImageIndexBangaru + 1) % imagesBangaru.length;
+            carouselImageBangaru.src = imagesBangaru[currentImageIndexBangaru];
+        }
+
+        function prevImageBangaru() {
+            currentImageIndexBangaru = (currentImageIndexBangaru - 1 + imagesBangaru.length) % imagesBangaru.length;
+            carouselImageBangaru.src = imagesBangaru[currentImageIndexBangaru];
+        }
+
+        // Automatically move to the next image every 3 seconds for each apartment section
+        setInterval(nextImageKasthuri, 3000);
+        setInterval(nextImageSolai, 3000);
+        setInterval(nextImageBangaru, 3000);
+    </script>
+</body>
+</html>
